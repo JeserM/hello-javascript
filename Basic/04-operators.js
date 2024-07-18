@@ -1,110 +1,105 @@
-/*
-Clase 2 en vídeo | 17/07/2024
-Tipos de datos, operadores y strings
-https://www.twitch.tv/videos/2200149072?t=00h08m02s
-*/
+// Operadores   + - * / % ++ --
 
 // Operadores Aritméticos
-
 let a = 5
 let b = 10
-
-console.log(a + b) // Suma
+console.log(a + b) // Suma  
 console.log(a - b) // Resta
-console.log(a * b) // Multiplicación
+console.log(a * b) // Multiplicación  
 console.log(a / b) // División
 
-console.log(a % b) // Módulo
-console.log(a ** b) // Exponente
+console.log(a % b) // Módulo, resto de la división
+console.log(a ** b) // Potencia, a elevado a la b, a^b, exponente
 
-a++ // Incremento
-console.log(a)
+// Operadores de Incremento y Decremento
+a++// Incremento, a = a + 1   
+console.log("hola",a)
 
-b-- // Decremento
-console.log(b)
+b--// Decremento, b = b - 1
+console.log(b) 
 
-// Operadores de asignacion
+// Operadores de Asignación, asignan un valor a una variable
 
 let myVariable = 2
 console.log(myVariable)
-myVariable += 2 // Suma con asignación
+myVariable += 2 // myVariable = myVariable + 2
 console.log(myVariable)
 
-myVariable -= 2 // Resta con asignación
-myVariable *= 2 // Multiplicación con asignación
-myVariable /= 2 // División con asignación
-myVariable %= 2 // Módulo con asignación
-myVariable **= 2 // Exponente con asignación
+myVariable -= 2 
+myVariable += 2 
+myVariable /= 2 
+myVariable %= 2 
+myVariable **= 2 
 
-// Operadores de comparación
+// Operadores de Comparación, comparan dos valores y devuelven un valor booleano
+console.log("Ajam, a es:",a)
 
-console.log(a > b) // Mayor que
-console.log(a < b) // Menor que
-console.log(a >= b) // Mayor o igual que
-console.log(a <= b) // Menor o igual que
-console.log(a == b) // Igualdad por valor
-console.log(a == 6)
-console.log(a == "6")
-console.log(a == a)
-console.log(a === a) // Igualdad por identidad (por tipo y valor) o igualdad estricta
+console.log(a > b) 
+console.log(a < b) 
+console.log(a >= b) 
+console.log(a <= b) 
+console.log(a == 6) // Igual por valor
+console.log(a == "6") // Igual por valor, javascript comparará el valor sin importar el tipo de dato, por eso da true
+// Comprobar el valor y el tipo de dato
+console.log(a === a) // Igual por identidad ()
 console.log(a === 6)
-console.log(a === "6")
-console.log(a != 6) // Desigualdad por valor
-console.log(a !== "6") // Desigualdad por identidad (por tipo y valor) o desigualdad estricta
-console.log(0 == false)
-console.log(1 == false)
-console.log(2 == false)
-console.log(0 == "")
-console.log(0 == " ")
-console.log(0 == '')
-console.log(0 == "Hola")
-console.log(0 === "")
-console.log(undefined == null)
-console.log(undefined === null)
+console.log(a === "6") // Igual por identidad, javascript comparará el valor y el tipo de dato, por eso da false
 
-/*
-Truthy values (valores verdaderos)
+console.log("A es distinto de 6", a != 6) // Operador de desigualdad. Diferente por valor
+console.log(a !== 6) // Operador de desigualdad estricta. Diferente por valor y tipo de dato
+console.log(a !== "6") // Operador de desigualdad estricta. Diferente por valor y tipo de dato. TRUE
+console.log(0 == false) // true
+console.log(1 == false) // false
+console.log(2 == false) // false
+console.log(0 == "") // true, cadena de texto vacia
+console.log(0 == " ") // true
+console.log(0 == '') // true
+console.log(0 == "Hola") // false
+console.log(0 === "") // false, tipos diferentes
+console.log(undefined == null) // true
+console.log(undefined === null) // false
 
-- Todos los numeros positivos y negativos menos el cero
-- Todas las cadenas de texto menos las vacías
-- El boolean true
-*/
+// Truthy values (valores verdaderos, definidos por el lenguaje)
 
-/*
-Falsy values (valores falsos)
+// Todos los numeros postivos y negativos son verdaderos menos el cero
+// Todas las cadenas de texto menos las vacias son verdaderas
+// El boolean True es verdadero
 
-- 0
--  0n
-- null
-- undefined
-- NaN (Not a Number)
-- El boolean false
-- Cadenas de texto vacías 
-*/
+//Falsy values (valores falsos)
+// 0
+// 0n (BigInt)
+// null
+//undefined
+// NaN (not a number)
+// cadena de texto vacia
+//el boolean False
 
-// Operadores lógicos
+// Operadores Lógicos, logica booleana. permiten combinar valores booleanos y devuelven un valor booleano 
 
-// and (&&)
-console.log(5 > 10 && 15 > 20)
-console.log(5 < 10 && 15 < 20)
-console.log(5 < 10 && 15 > 20)
-console.log(5 > 10 && 15 > 20 && 30 > 40)
+// AND (&&), solo devuelve verdadero si ambos valores son verdaderos
+console.log(`Logica AND`)
+console.log(5>10 && 15>20) // false
+console.log(5<10 && 15<20)
+console.log(5<10 && 15>20)
+console.log(5>10 && 15>20 && 30>40)
 
-// or (||)
-console.log(5 > 10 || 15 > 20)
-console.log(5 < 10 || 15 < 20)
-console.log(5 < 10 || 15 > 20)
-console.log(5 > 10 || 15 > 20 || 30 > 40)
+// OR (||), devuelve verdadero si al menos uno de los valores es verdadero
+console.log(`Logica OR`)
+console.log(5>10 || 15>20)
+console.log(5<10 || 15<20)
+console.log(5<10 || 15>20)
 
-console.log(5 > 10 && 15 > 20 || 30 < 40)
 
-// not (!)
-console.log(!true)
-console.log(!false)
-console.log(!(5 > 10 && 15 > 20))
-console.log(!(5 > 10 || 15 > 20))
+// NOT (!), negacion. devuelve el valor contrario
+console.log(`Niego True`, !true)
+console.log(`Niego False`, !false)
 
-// Operadores ternarios
+
+// Operador Ternario, es una forma abreviada de escribir una sentencia if
 
 const isRaining = false
-isRaining ? console.log("Está lloviendo") : console.log("No está lloviendo")
+
+isRaining ? console.log("Esta lloviendo") : console.log("No esta lloviendo")
+
+let isRaining2 = true
+isRaining2 ? console.log("Esta lloviendo") : console.log("No esta lloviendo")

@@ -1,56 +1,49 @@
-/*
-Clase 2 en vídeo | 17/07/2024
-Tipos de datos, operadores y strings
-https://www.twitch.tv/videos/2200149072?t=00h08m02s
-*/
+//Datos primitivos, son basico e inmutables y representan un solo valor. Hay 7 tipos de datos primitivos en JavaScript
 
-// Tipos de datos primitivos
+// String (cadena de texto)
+let name = "Jeser"
+let alias = 'Azabache'
+let mail = `jmg@gmail.com`
 
-// Cadenas de texto (string)
-let myName = "Brais Moure"
-let alias = 'MoureDev'
-let email = `braismoure@mouredev.com`
+// Number (número) 64 bits
+let age = 25 // Entero
+let height = 1.82 // Decimal
 
-// Números (number)
-let age = 37 // Entero
-let height = 1.77 // Decimal
-
-// Booleanos (boolean)
-let isTeacher = true
+// Boolean (valor lógico)
 let isStudent = false
+let isTeacher = true
 
-// Undefined
+// Undefined (valor no definido)
 let undefinedValue
 console.log(undefinedValue)
 
-// Null
+// Null (valor nulo)
 let nullValue = null
 
-// Symbol
-
+// Symbol (valor único)
 let mySymbol = Symbol("mysymbol")
 
-// BigInt
+//BigInt (entero de longitud arbitraria)
 
-let myBigInt = BigInt(817239871289371986589716389471628379612983761289376129)
-let myBigInt2 = 817239871289371986589716389471628379612983761289376129n
+let myBigInt = BigInt(9007199254740991)
+let myBigInt2 = 9007199254740991n 
 
-// Mostramos los tipos de datos
-console.log(typeof myName)
+//Mostramos los tipos de datos
+console.log(typeof name)
 console.log(typeof alias)
-console.log(typeof email)
+console.log(typeof mail)
 
 console.log(typeof age)
 console.log(typeof height)
 
-console.log(typeof isTeacher)
 console.log(typeof isStudent)
+console.log(typeof isTeacher)
 
 console.log(typeof undefinedValue)
 
-console.log(typeof nullValue)
+console.log(typeof nullValue) //la variable en si es un objeto, pero el valor es null un dato primitivo
 
-console.log(typeof mySymbol)
+console.log(typeof mySymbol) 
 
 console.log(typeof myBigInt)
 console.log(typeof myBigInt2)

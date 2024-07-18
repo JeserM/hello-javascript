@@ -1,30 +1,26 @@
-/*
-Clase 1 en vídeo | 10/07/2024
-Introducción, instalación, hola mundo y variables
-https://www.twitch.tv/videos/2194200202?t=00h14m43s
-*/
+// var, nombre lowercase, nombre compuesto camelCase. No se usa var, se usa let
 
-// var
-
-var helloWorld = "¡Hola, JavaScript!"
+var helloWorld = "¡Hello, JavaScript!"
 console.log(helloWorld)
 
-helloWorld = "¡Hola de nuevo, JavaScript!"
+helloWorld = "¡Hello de nuevo, JavaScript!"
 console.log(helloWorld)
 
-// let
+// !ya no se usa var, se usa let
 
-let helloWorld2 = "¡Hola, JavaScript 2!"
+// ** let, las variables de let solo se accesibles en el bloque donde se declaran
+
+let helloWorld2 = "¡Hello, JavaScript2!"
 console.log(helloWorld2)
 
-helloWorld2 = "¡Hola de nuevo, JavaScript 2!"
+helloWorld2 = "¡Hello de nuevo, JavaScript2!"
 console.log(helloWorld2)
 
 // const
 
-const helloWorld3 = "¡Hola, JavaScript 3!"
+const helloWorld3 = "¡Hello, JavaScript3!"
 console.log(helloWorld3)
 
-// Error
-// helloWorld3 = "¡Hola de nuevo, JavaScript 2!"
+// Esto no se puede hacer, es un error
+// helloWorld3 = "¡Hello, JavaScript2!"
 // console.log(helloWorld3)
