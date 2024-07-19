@@ -17,10 +17,10 @@ let isTeacher = true
 let undefinedValue
 console.log(undefinedValue)
 
-// Null (valor nulo)
+// Null (valor nulo), se usa para indicar que una variable no tiene valor. Es un objeto, pero es un dato primtivo. La variables en si es un objeto, pero el valor es null   
 let nullValue = null
 
-// Symbol (valor único)
+// Symbol (valor único) se usa para identificadores unicos, se usa para evitar colisiones de nombres de propiedades de objetos
 let mySymbol = Symbol("mysymbol")
 
 //BigInt (entero de longitud arbitraria)
