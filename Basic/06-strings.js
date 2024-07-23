@@ -1,6 +1,6 @@
 //strings
 
-//conmcatenación de strings
+//concatenación de strings
 let myName = "Jeser"
 let greeting = "Hola, " + myName + "!"//saludo
 console.log(greeting)
