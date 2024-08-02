@@ -20,8 +20,8 @@ console.log(myMap)
 
 // set - añadir un par clave-valor o actualizarlo
 
-myMap.set("alias", "Mouredev")
-myMap.set("name", "Brais Moure")
+myMap.set("alias", "Mouredev") // añade un nuevo par clave-valor
+myMap.set("name", "Brais Moure") // actualiza el valor de una clave existente
 
 console.log(myMap)
 
@@ -32,8 +32,8 @@ console.log(myMap.get("surname"))
 
 // has - comprobar si existe una clave
 
-console.log(myMap.has("surname"))
-console.log(myMap.has("age"))
+console.log(myMap.has("surname")) // false, no existe la clave
+console.log(myMap.has("age")) // true, existe la clave
 
 // delete - eliminar un par clave-valor
 
@@ -43,9 +43,9 @@ console.log(myMap)
 
 // keys, values y entries - obtener todas las claves o valores
 
-console.log(myMap.keys())
-console.log(myMap.values())
-console.log(myMap.entries())
+console.log(myMap.keys()) // devuelve un objeto iterable, un listado, no un array.
+console.log(myMap.values()) // values devuelve los valores,
+console.log(myMap.entries()) // entries devuelve los pares clave-valor
 
 //size - obtener el número de pares clave-valor
 
