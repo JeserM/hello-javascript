@@ -66,4 +66,29 @@ mapMonths.has(5) ? console.log(mapMonths.get(5)) : console.log("No existe")
 
 // 9. Añade al mapa una clave con un array que almacene los meses de verano
 
+mapMonths.set("summer", ["junio", "julio", "agosto"])
+console.log(mapMonths.get("summer"))
+
+let verano = mapMonths.get("summer")
+console.log(typeof verano, verano)
+
 // 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
+let array = [1, 2, 3, 4, 5]
+console.log(array)
+let set = new Set(array)
+console.log(set)
+let map = new Map([["miSet", set]])
+console.log(map)
+
+// Paso 1: Crear un array con algunos elementos
+const array2 = [1, 2, 3, 4, 5, 1, 2]
+
+// Paso 2: Transformar el array a un Set para eliminar duplicados
+const set2 = new Set(array2)
+
+// Paso 3: Crear un Map y almacenar el Set en el Map con una clave específica
+const map2 = new Map()
+map2.set("miSet2", set2)
+
+// Imprimir el Map para verificar
+console.log(map2)
