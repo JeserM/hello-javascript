@@ -68,6 +68,7 @@ mapMonths.has(5) ? console.log(mapMonths.get(5)) : console.log("No existe")
 
 mapMonths.set("summer", ["junio", "julio", "agosto"])
 console.log(mapMonths.get("summer"))
+console.log(mapMonths)
 
 let verano = mapMonths.get("summer")
 console.log(typeof verano, verano)
