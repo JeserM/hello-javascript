@@ -17,7 +17,7 @@ myFunctionWithParams(`Jeser`)
 myFunctionWithParams(`Pepe`)
 
 // Funciones anonimas
-// let myFunction = function(name) hay que declararla antes de usarla, asignarla a una variable
+// let myFunction = function(name) hay que declararla antes de usarla, asignarla a una variable, se usan para callbacks
 
 const myFunc2 = function (name) {
     console.log(`Hola, ${name}!!`)

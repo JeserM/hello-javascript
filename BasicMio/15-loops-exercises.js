@@ -125,7 +125,7 @@ for (let nombres of arrayNames) {
 
 // 5. Escribe un bucle que cuente el número de vocales en una cadena de texto
 
-let texto = "Hola carA colA"
+let texto = "Hola carA colA, cigüeña y murciélago"
 let contador = 0
 texto = texto.toLowerCase()
 for (let letra of texto) {
@@ -135,7 +135,7 @@ for (let letra of texto) {
 }
 console.log(`El número de vocales es: ${contador}`)
 
-const vocales = new Set(["a", "e", "i", "o", "u"])
+const vocales = new Set(["a", "e", "i", "o", "u", "á", "é", "í", "ó", "ú", "ü"])
 contador = 0
 texto = texto.toLowerCase()
 for (let letra of texto) {
@@ -144,6 +144,15 @@ for (let letra of texto) {
     }
 }
 console.log(`El número de vocales es: ${contador}`)
+
+let numVocales = 0
+let cadeTexto = "Cuenta el numero de vocales"
+for (let valor of cadeTexto) {
+    if ("aeiouAEIOU".includes(valor)) {
+        numVocales++
+    }
+}
+console.log(numVocales)
 
 // 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto
 

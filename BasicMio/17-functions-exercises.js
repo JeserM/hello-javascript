@@ -84,20 +84,73 @@ console.log(strinToMayus(myArray))
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
 
 function esPrimo(num) {
-    if (num / 2 == 0) {
-        return false
-    } else {
+    if (num / 1 == num && num / num == 1 && num != 1) {
         return true
+    } else {
+        return false
     }
 }
-let num = 2
+let num = 62
 console.log(`Es primo el ${num} : ${esPrimo(num)}`) // true
+//! PENSARLO MEJOR, no esta hecho correctamente
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
 
+function elementosComunes(array1, array2) {
+    let arrayComunes = []
+    for (let element of array1) {
+        if (array2.includes(element)) {
+            arrayComunes.push(element)
+        }
+    }
+    return arrayComunes
+}
+
+let array1 = [1, 2, 3, 4, 5, "hola", "adios"]
+let array2 = [3, 4, 5, 6, 7, "hola", "adios", "saludos"]
+
+console.log(elementosComunes(array1, array2))
+
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
+function sumaParesArray(array) {
+    let suma = 0
+    for (let num of array) {
+        if (num % 2 == 0) {
+            console.log(suma, num)
+            suma = suma + num
+        }
+    }
+    return suma
+}
+
+let arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(sumaParesArray(arrayNum))
+
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+
+arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arrayCuadrado = arrayNum.map((num) => num ** 2)
+
+console.log(arrayCuadrado)
+
+arrayCuadrado = arrayNum.map(function (num) {
+    return num ** 2
+})
+
+//arrayCuadrado =  []
+
+function cuadradoArray(array) {
+    let arrayCuadrado = []
+    for (let num of array) {
+        arrayCuadrado.push(num ** 2)
+    }
+    return arrayCuadrado
+}
+console.log(`con funcion: ${cuadradoArray(arrayNum)}`)
+
+arrayCuadrado = cuadradoArray(arrayNum)
+console.log(arrayCuadrado)
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
