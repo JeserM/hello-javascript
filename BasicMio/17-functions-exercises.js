@@ -134,9 +134,11 @@ arrayCuadrado = arrayNum.map((num) => num ** 2)
 
 console.log(arrayCuadrado)
 
-arrayCuadrado = arrayNum.map(function (num) {
+arrayCuadrado2 = arrayNum.map(function (num) {
     return num ** 2
 })
+
+console.log(arrayCuadrado2)
 
 //arrayCuadrado =  []
 
@@ -154,4 +156,74 @@ console.log(arrayCuadrado)
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
+function inversoString(string) {
+    let stringInverso = ""
+    for (let i = string.length - 1; i >= 0; i--) {
+        stringInverso += string[i]
+    }
+    return stringInverso
+}
+
+function inversoString2(string) {
+    let stringInverso = ""
+    let nuevoInicio = 0
+    for (let i = 0; i < string.length; i++) {
+        //console.log("fuera de if ", i, string[i])
+        if (string[i] === " ") {
+            stringInverso = string.slice(nuevoInicio, i + 1) + stringInverso
+            //console.log(`dentro de if `, i, string[i], stringInverso)
+            nuevoInicio = i + 1
+        } else if (i === string.length - 1) {
+            stringInverso = string.slice(nuevoInicio, i + 1) + ` ` + stringInverso
+            //console.log(`dentro de if `, i, string[i], stringInverso)
+            break
+        }
+    }
+    return stringInverso
+}
+
+function inversoString3(string) {
+    let array = string.split(" ")
+    let arrayInverso = array.reverse()
+    let stringInverso = arrayInverso.join(" ")
+    return stringInverso
+}
+
+mystring = `Hola que tal por aqui`
+// console.log(mystring.length)
+// console.log(mystring.length - 1)
+// console.log(mystring[0], ` `, mystring[mystring.length])
+console.log(inversoString(mystring))
+console.log(inversoString2(mystring))
+console.log(inversoString3(mystring))
+
 // 10. Crea una función que calcule el factorial de un número dado
+
+function factorial(num) {
+    let factorial = 1
+    for (let i = 1; i <= num; i++) {
+        //factorial = factorial * i
+        factorial *= i
+    }
+    return factorial
+}
+
+const factorial2 = (num) => {
+    let factorial = 1
+    for (let i = 1; i <= num; i++) {
+        factorial *= i
+    }
+    return factorial
+}
+
+//const factorial3 = (num) => let factorial = 1; for (let i =1; i<=num; i++){factorial *= i}; return factorial
+
+console.log(factorial(5)) // 120
+console.log(factorial(3)) // 6
+console.log(factorial(10)) // 3628800
+
+console.log(factorial2(5)) // 120
+console.log(factorial2(3)) // 6
+console.log(factorial2(10)) // 3628800
+
+console.log(factorial(1)) // 3628800
