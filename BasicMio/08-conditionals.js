@@ -12,7 +12,7 @@ if (age == 37) {
 
 if (age == 37) {
     console.log("La edad es 37")
-}else{
+} else {
     console.log("La edad no es 37")
 }
 
@@ -20,10 +20,9 @@ if (age == 37) {
 
 if (age == 37) {
     console.log("La edad es 37")
-}else if(age < 18){
+} else if (age < 18) {
     console.log("Es menor de edad")
-}
-else{
+} else {
     console.log("La edad no es 37, ni es menor de edad")
 }
 
@@ -45,7 +44,7 @@ switch (day) {
     case 1:
         dayname = "Martes"
         break
-    case 2: 
+    case 2:
         dayname = "Miércoles"
         break
     case 3:
@@ -57,12 +56,31 @@ switch (day) {
     case 5:
         dayname = "Sábado"
         break
-    case 6: 
+    case 6:
         dayname = "Domingo"
         break
     default:
         dayname = "Número de día incorrecto"
-        // break, no hace falta porque es el último
+    // break, no hace falta porque es el último
 }
 
 console.log(dayname) // Domingo
+
+/* Otra forma sin usar switch. Sacado de https://www.youtube.com/watch?v=0NlsJuwFsrQ
+ */
+
+const dia = "0"
+
+const dias = {
+    0: "Lunes",
+    1: "Martes",
+    2: "Miércoles",
+    3: "Jueves",
+    4: "Viernes",
+    5: "Sábado",
+    6: "Domingo",
+}
+
+const diaSeleccionado = dias[dia] || "Día no válido"
+console.log(diaSeleccionado) // Jueves
+console.log(typeof dias) // Jueves

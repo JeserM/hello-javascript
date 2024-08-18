@@ -63,7 +63,7 @@ function defaultSum(a = 0, b = 0) {
 defaultSum()
 defaultSum(5)
 defaultSum(5, 10)
-defaultSum(b = 5)
+defaultSum((b = 5))
 
 // Retorno de valores
 
@@ -104,7 +104,7 @@ mySet = new Set(["Brais", "Moure", "mouredev", 37, true, "braismoure@mouredev.co
 myMap = new Map([
     ["name", "Brais"],
     ["email", "braismoure@mouredev.com"],
-    ["age", 37]
+    ["age", 37],
 ])
 
 myArray.forEach(function (value) {

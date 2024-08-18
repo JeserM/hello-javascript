@@ -31,14 +31,14 @@ console.log(typeof person.age)
 // Eliminacion de propiedades
 
 delete person.age
-console.log(person) // { name: 'Jane', alias: 'New York' }
+console.log(person) // { name: 'Brais Moure', alias: 'MoureDev' }
 
 // NUeva propiedad
 
 person.email = "braismoure@mouredev.com"
 person["age"] = 37
 
-console.log(person) // { name: 'Jane', alias: 'New York', email: '
+console.log(person)
 
 // Metodos (funciones dentro de un objeto)
 
@@ -75,10 +75,10 @@ let person3 = {
 
 console.log(person3)
 // Programador
-console.log(person3.name) // Programador
-console.log(person3.job) // Programador
-console.log(person3.job.name) // Programador
-//console.log(person3.job.work) // Programador
+console.log(person3.name)
+console.log(person3.job)
+console.log(person3.job.name)
+//console.log(person3.job.work)
 person3.job.work()
 
 let person4 = {
@@ -102,10 +102,11 @@ for (let key in person) {
     console.log(key + ": " + person[key])
 }
 
-// Funciones como object. Es como si fuera un constructor de objetos
+// Funciones como objects. Es como si fuera un constructor de objetos. Util para crear objetos de un mismo tipo.
+// para crear varias instancias de un objeto
 
 function Person(name, age) {
-    // Los tres puntits ya nos dice algo, deberia ser una clase.
+    // Los tres puntits ya nos dice algo, deberia ser una clase. No es una buena practica
     this.name = name
     this.age = age
 }

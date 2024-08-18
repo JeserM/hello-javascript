@@ -92,7 +92,8 @@ function esPrimo(num) {
 }
 let num = 62
 console.log(`Es primo el ${num} : ${esPrimo(num)}`) // true
-//! PENSARLO MEJOR, no esta hecho correctamente
+
+// TODO---> PENSARLO MEJOR, no esta hecho correctamente
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
 

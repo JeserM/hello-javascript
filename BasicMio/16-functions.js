@@ -115,3 +115,66 @@ myArray.forEach((value) => console.log(value))
 mySet.forEach((value) => console.log(value))
 
 myMap.forEach((value) => console.log(value))
+
+// Mas sobre parametros. Parametros rest y spread
+
+// Parametros rest
+
+function restParams(a, b, ...rest) {
+    console.log(a)
+    console.log(b)
+    console.log(rest)
+}
+
+restParams(1, 2, 3, 4, 5, 6, 7)
+
+// Parametros spread
+
+function spreadParams(a, b, c) {
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+
+let myArray2 = [1, 2, 3]
+spreadParams(...myArray2)
+//spreadParams(...myArray2, 4, 5, 6, 7, 8, 9, 10) // se pueden añadir más valores
+
+/* Parametros nombrados en funciones. Se pueden pasar los valores en cualquier orden y se asignan a los parametros por nombre
+https://www.youtube.com/watch?v=jmxZrIHPRDg&t=11s */
+
+function namedParams({ a, b, c }) {
+    console.log(a)
+    console.log(b)
+    console.log(c)
+}
+
+namedParams({ c: 3, b: 2, a: 1 })
+
+function createGodzilla(color, weight = 200, sound, powers) {
+    console.log(color)
+    console.log(weight)
+    console.log(sound)
+    console.log(powers)
+}
+
+createGodzilla("green", undefined, "roar", "fire")
+
+function createGodzilla2({ color, weight = 200, sound, material, powers }) {
+    console.log(color)
+    console.log(weight)
+    console.log(sound)
+    console.log(powers)
+    console.log(material)
+}
+
+createGodzilla2({ color: "violeta", sound: "Miau", powers: "rainbown" })
+
+const godzillaParams = {
+    color: "azulado",
+    sound: "rugido",
+    powers: "electrico",
+    material: "goma",
+}
+createGodzilla2(godzillaParams)
+createGodzilla(godzillaParams) // mete todo el objeto en el primer parametro
