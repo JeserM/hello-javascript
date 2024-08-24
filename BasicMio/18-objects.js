@@ -81,6 +81,8 @@ console.log(person3.job.name)
 //console.log(person3.job.work)
 person3.job.work()
 
+// Igualdad de objetos
+
 let person4 = {
     name: "Brais Moure",
     age: 37,

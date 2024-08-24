@@ -16,7 +16,7 @@ console.log(myValue)
 let myName = person.name
 console.log(myName)
 
-// Desestructuracion
+// Desestructuración - Destructuring
 
 // Sintaxis arrays
 
@@ -41,8 +41,8 @@ console.log(myValue9)
 // Ignorar elementos de un array. Se puede hacer con comas, pero no es recomendable.
 
 let [myValue10, , , myValue13] = myArray
-console.log(myValue10)
-console.log(myValue13)
+console.log(`Ignoro posicion 2 y 3, ${myValue10}`, myValue10)
+console.log(`Ignoro posicion 2 y 3, ${myValue13}`, myValue13)
 
 // Sintaxis objetos
 
@@ -52,6 +52,8 @@ console.log(age)
 console.log(alias)
 
 // Sintaxis objetos con valores por defecto. No tiene mucho sentido, porque si no encuentra el valor, no asigna nada.
+// Y da igual el orden en el que se pongan las variables, porque se asignan por el nombre de la propiedad.
+// esas variables no existen, por lo que no se pueden asignar valores por defecto.
 
 let { name2, age2, alias2, email = "email@email.com" } = person
 console.log(name2) // No existe
@@ -60,13 +62,14 @@ console.log(alias2) // No existe
 console.log(email)
 
 // Sintaxis objetos con nuevos nombres de variables
+// el orden no importa, lo que importa es el nombre de la propiedad.
 
 let { name: name3, age: age3, alias: alias3 } = person
 console.log(name3)
 console.log(age3)
 console.log(alias3)
 
-//
+// Objects anidados
 
 let person3 = {
     name: "Brais",
@@ -85,3 +88,41 @@ let person3 = {
         },
     },
 }
+
+// let {name: name4,job: { name: jobName }} = person3
+let {
+    name: name4,
+    job: { name: jobName },
+} = person3
+console.log(`de person3: `, name4)
+console.log(`de person3.job: `, jobName)
+
+// Propagación (...) - Spread Operator
+
+// Sintaxis arrays
+
+let myArray2 = [...myArray, 5, 6] // Añade elementos
+console.log(myArray2)
+
+// Copia de arrays
+
+let myArray3 = [...myArray]
+console.log(myArray3)
+
+// Combinacion de arrays
+
+let myArray4 = [...myArray, ...myArray2]
+
+console.log(myArray4)
+
+// Sintaxis objetos
+
+let person4 = { ...person, email: "braismoure@mouredev.com" }
+
+console.log(person4)
+
+//copia de objetos
+
+let person5 = { ...person }
+
+console.log(person5)
